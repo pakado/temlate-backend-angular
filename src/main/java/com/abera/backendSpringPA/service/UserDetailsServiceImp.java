@@ -30,10 +30,10 @@ public class UserDetailsServiceImp implements UserDetailsService {
                 true,
                 true,
                 true,
-                getAuthrities("ROLE_USER"));
+                getAuthorities("ROLE_USER"));
     }
 
-    private Collection<? extends GrantedAuthority> getAuthrities(String role_user) {
+    private Collection<? extends GrantedAuthority> getAuthorities(String role_user) {
         return Collections.singleton(new SimpleGrantedAuthority(role_user));
     }
 }
